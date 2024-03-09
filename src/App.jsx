@@ -1,10 +1,10 @@
 import './App.css';
-import Preplay from './components/Preplay';
+import Play from './components/Preplay';
 
 function App() {
   return (
     <div className='App'>
-      <Preplay />
+      <Play />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './modal/Modal';
 
-const Preplay = () => {
+const Play = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
@@ -27,15 +27,15 @@ const Preplay = () => {
   const choice = {
     rock: {
       name: 'Rock',
-      img: 'src/assets/image/rock.png',
+      img: 'src/assets/rock.png',
     },
     scissors: {
       name: 'Scissors',
-      img: 'src/assets/image/scissors.png',
+      img: 'src/assets/scissors.png',
     },
     paper: {
       name: 'Paper',
-      img: 'src/assets/image/paper.png',
+      img: 'src/assets/paper.png',
     },
   };
 
@@ -63,9 +63,9 @@ const Preplay = () => {
           <div className=' text-2xl font-bold'>Rock, Scissors, Paper Game!</div>
           <div className='flex mt-28 mb-20 justify-center'>
             <div style={{ maxWidth: '80%', display: 'flex', justifyContent: 'center' }}>
-              <img style={{ maxWidth: '40%' }} src='src\assets\image\rock.png' />
-              <img style={{ maxWidth: '40%' }} src='src\assets\image\scissors.png' />
-              <img style={{ maxWidth: '40%' }} src='src\assets\image\paper.png' />
+              <img style={{ maxWidth: '40%' }} src='src\assets\rock.png' />
+              <img style={{ maxWidth: '40%' }} src='src\assets\scissors.png' />
+              <img style={{ maxWidth: '40%' }} src='src\assets\paper.png' />
             </div>
           </div>
 
@@ -106,4 +106,4 @@ const Preplay = () => {
   );
 };
 
-export default Preplay;
+export default Play;
