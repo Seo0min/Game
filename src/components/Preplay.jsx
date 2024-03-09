@@ -59,18 +59,23 @@ const Preplay = () => {
   return (
     <>
       <div className='flex flex-col items-center bg-yellow-100 h-screen'>
-        <div>Rock, Scissors, Paper Game!</div>
-        <div className='flex flex-row'>
-          <img src='src\assets\image\rock.png' />
-          <img src='src\assets\image\scissors.png' />
-          <img src='src\assets\image\paper.png' />
-        </div>
-        <div>
-          <button onClick={openModal} className='w-20 bg-lime-400'>
-            Play
-          </button>
+        <div className='text-center mt-20'>
+          <div className=' text-2xl font-bold'>Rock, Scissors, Paper Game!</div>
+          <div className='flex mt-28 mb-20 justify-center'>
+            <div style={{ maxWidth: '80%', display: 'flex', justifyContent: 'center' }}>
+              <img style={{ maxWidth: '40%' }} src='src\assets\image\rock.png' />
+              <img style={{ maxWidth: '40%' }} src='src\assets\image\scissors.png' />
+              <img style={{ maxWidth: '40%' }} src='src\assets\image\paper.png' />
+            </div>
+          </div>
+
+          <div>
+            <button onClick={openModal} className='w-20 bg-lime-400 mt-10'>
+              Play
+            </button>
+          </div>
           <Modal isOpen={isModalOpen} closeModal={closeModal}>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-5'>
               <button onClick={() => play('rock')} className='w-20 h-20 bg-red-100 rounded-full mx-2'>
                 Rock
               </button>
@@ -81,13 +86,19 @@ const Preplay = () => {
                 Paper
               </button>
             </div>
-            <div className='flex'>
-              <div>Computer</div>
-              {computerSelect && <img src={computerSelect.img} alt={computerSelect.name} />}
-              <div>You</div>
-              {userSelect && <img src={userSelect.img} alt={userSelect.name} />}
+            <div className='text-center'>
+              <div className='flex justify-around mt-10'>
+                <div className='flex flex-col mb-5'>
+                  <div>Computer</div>
+                  {computerSelect && <img src={computerSelect.img} alt={computerSelect.name} />}
+                </div>
+                <div className='flex flex-col'>
+                  <div>You</div>
+                  {userSelect && <img src={userSelect.img} alt={userSelect.name} />}
+                </div>
+              </div>
+              {result && <div className='text-2xl mt-5 font-bold'>{result}</div>}
             </div>
-            {result && <div>{result}</div>}
           </Modal>
         </div>
       </div>
