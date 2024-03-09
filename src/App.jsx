@@ -1,5 +1,5 @@
 import './App.css';
-import Play from './components/Preplay';
+import Play from './components/Play';
 
 function App() {
   return (
