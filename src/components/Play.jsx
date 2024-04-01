@@ -63,9 +63,9 @@ const Play = () => {
           <div className=' text-2xl font-bold'>Rock, Scissors, Paper Game!</div>
           <div className='flex mt-28 mb-20 justify-center'>
             <div style={{ maxWidth: '80%', display: 'flex', justifyContent: 'center' }}>
-              <img style={{ maxWidth: '40%' }} src='src\assets\rock.png' />
-              <img style={{ maxWidth: '40%' }} src='src\assets\scissors.png' />
-              <img style={{ maxWidth: '40%' }} src='src\assets\paper.png' />
+              <img style={{ maxWidth: '40%' }} src='../src/assets/rock.png' />
+              <img style={{ maxWidth: '40%' }} src='../src/assets/scissors.png' />
+              <img style={{ maxWidth: '40%' }} src='../src/assets/paper.png' />
             </div>
           </div>
 
